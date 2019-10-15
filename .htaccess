@@ -1,0 +1,5 @@
+# Allow (i)frame embedding
+<IfModule mod_headers.c>
+     #Header set X-Frame-Options "allow-from *"
+     Header unset X-Frame-Options
+</IfModule>
