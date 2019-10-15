@@ -26,14 +26,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Ubuntu+Mono:400,700');
 
-        @media screen and (min-width:1112px) {
-            html {
-                transform: scale(1.4);
-                transform-origin: top;
-                overflow-x: hidden;
-            }
-        }
-
         body {
             background: rgb(204, 204, 204);
             font-family: Raleway;
@@ -326,8 +318,15 @@
             color:#fff;
         }
 
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
 
         .github-corner:hover .octo-arm {
+            animation: none
+        }
+
+        .github-corner .octo-arm {
             animation: octocat-wave 560ms ease-in-out
         }
 
@@ -346,16 +345,6 @@
             40%,
             80% {
                 transform: rotate(10deg)
-            }
-        }
-
-        @media (max-width:500px) {
-            .github-corner:hover .octo-arm {
-                animation: none
-            }
-
-            .github-corner .octo-arm {
-                animation: octocat-wave 560ms ease-in-out
             }
         }
 
@@ -494,6 +483,18 @@
             #src-on-github {
                 display: block;
                 position: static;
+            }
+        }
+
+        @media screen and (min-width:1112px) {
+            html {
+                transform: scale(1.4);
+                transform-origin: top;
+                overflow-x: hidden;
+            }
+
+            .home .github-corner {
+                right: 14vw;
             }
         }
     </style>
