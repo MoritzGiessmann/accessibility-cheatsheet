@@ -29,6 +29,7 @@
         :root {
             --text: #000;
             --headline-text: #fff;
+            --subline-text: #000;
             --sub-text: #000;
             --body-background: rgb(204, 204, 204);
             --active-bg: #e64626;
@@ -41,14 +42,15 @@
 
         @media (prefers-color-scheme: dark) {
             :root {
-                --headline-text: #b79a9a;
-                --text: #b79a9a;
+                --text: #e3e3e3;
+                --headline-text: #e3e3e3;
+                --subline-text: #e3e3e3;
                 --body-background: rgb(19, 19, 19);
                 --active-bg: #4f170c;
                 --page: #000;
                 --box-left-bg: #110a0a;
                 --box-bottom-even: #0b0403;
-                --figure-bg: #fff;
+                --figure-bg: #e3e3e3;
                 --headline-top-bg: #0b0403;
             }
         }
@@ -142,6 +144,7 @@
             margin: 0;
             font-size: 15pt;
             line-height: 1.4;
+            color: var(--subline-text)
         }
 
         main section {
