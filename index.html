@@ -539,6 +539,32 @@
                 right: 14vw;
             }
         }
+        /** only for local printing preview, add class tp body **/
+        .spreadshirt-print-styles #page {
+            width: 20cm;
+            height: 30cm;
+        }
+
+        .spreadshirt-print-styles a {
+            color:#000;
+            border-color: #000;
+        }
+        .spreadshirt-print-styles strong {
+            border-color: #000;
+        }
+
+        .spreadshirt-print-styles .kofi-link {
+            display: none;
+        }
+
+        .spreadshirt-print-styles footer {
+            padding: 0.3cm;
+        }
+
+        .spreadshirt-print-styles .top article {
+            padding: .3cm .2cm 0 .2cm;
+        }
+
     </style>
 </head>
 
@@ -592,9 +618,7 @@
                     <div class="content">
                         <h3>Provide text for non-text content</h3>
                         <p>Every content not represented by text is invisible for screen readers. Provide <strong><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html" target="_blank">concise
-                                descriptions</a> in alt attributes</strong> for all content images and text alternatives
-                            for
-                            charts etc. <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHAs</abbr>
+                                descriptions</a> in alt attributes</strong> for all content images and charts. <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHAs</abbr>
                             also need to be accessible.</p>
                     </div>
                 </article>
