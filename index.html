@@ -135,11 +135,48 @@
             text-decoration: underline;
         }
 
-        .kofi-link {
+        .promo-link {
            position: absolute;
            right: .25cm;
            top: .9cm;
            display: inline-block;
+           background-color: red;
+           color: white;
+           padding: .5rem;
+           border-radius: 100px;
+           text-decoration: none;
+           animation: wiggle 1.5s ease-in-out;
+           animation-delay: 7s;
+           border: 2px solid white;
+        }
+
+        .promo-link:is(:hover, :focus) {
+            text-decoration: none;
+            filter: brightness(200%);
+        }
+
+        @keyframes wiggle {
+            0%, 7% {
+                transform: rotateZ(0);
+            }
+            15% {
+                transform: rotateZ(-10deg);
+            }
+            20% {
+                transform: rotateZ(5deg);
+            }
+            25% {
+                transform: rotateZ(-5deg);
+            }
+            30% {
+                transform: rotateZ(2.5deg);
+            }
+            35% {
+                transform: rotateZ(-2deg);
+            }
+            40%, 100% {
+                transform: rotateZ(0);
+            }
         }
 
         h1 {
@@ -372,6 +409,18 @@
             fill: #000;
         }
 
+        /* marquee {
+            padding: .5rem;
+            background-color: var(--active-bg);
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        marquee a {
+            color: #fff !important;
+        } */
+
         @keyframes octocat-wave {
 
             0%,
@@ -389,6 +438,7 @@
                 transform: rotate(10deg)
             }
         }
+
 
         @media print {
             * {
@@ -439,7 +489,7 @@
                 writing-mode: unset;
             }
 
-            .kofi-link {
+            .promo-link {
                 position: static;
                 margin-top: .3cm;
             }
@@ -553,7 +603,7 @@
             border-color: #000;
         }
 
-        .spreadshirt-print-styles .kofi-link {
+        .spreadshirt-print-styles .promo-link {
             display: none;
         }
 
@@ -565,20 +615,23 @@
             padding: .3cm .2cm 0 .2cm;
         }
 
+
     </style>
 </head>
 
 <body>
-
+    <!-- <marquee onmouseover="this.stop()" onmouseout="this.start()" role="marquee">
+        <a href="https://wowirsindistvorne.myspreadshop.de/accessibility+cheatsheet+poster-A6697cb249b244f5c9fd2fc5c?productType=1304&sellable=YDoXNG1ygBUJb1NQvzym-1304-202&appearance=1&size=29" target="_blank">Get this accessibility cheat sheet as a poster for your office and make inclusivity effortless!</a>
+    </marquee> -->
     <div id="page" data-size="A4">
         <header>
-            <sup><abbr title="Version" aria-label="Version">v</abbr>0.12 &ndash; 2024-05-20</sup>
+            <sup><abbr title="Version" aria-label="Version">v</abbr>1.0 &ndash; 2024-05-20</sup>
             <h1>Accessibility Cheatsheet</h1>
             <p>Practical approaches to Universal Design for making <br>your website/webapp accessible to everyone
                 <sub><a href="https://moritzgiessmann.de/accessibility-cheatsheet/">https://moritzgiessmann.de/accessibility-cheatsheet/</a></sub>
             </p>
-            <a href='https://ko-fi.com/J3J3JAWO1' target='_blank' class="kofi-link">
-                <img height='36' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' />
+            <a href='https://wowirsindistvorne.myspreadshop.de/accessibility+cheatsheet+poster-A6697cb249b244f5c9fd2fc5c?productType=1304&sellable=YDoXNG1ygBUJb1NQvzym-1304-202&appearance=1&size=29' target='_blank' class="promo-link">
+                ✨ Order as a poster! ✨
             </a>
         </header>
         <main>
