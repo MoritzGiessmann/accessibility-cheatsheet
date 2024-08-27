@@ -19,7 +19,39 @@
     <meta property="og:title" content="Accessibility Cheatsheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Ubuntu+Mono:400,700');
+        /* raleway-500 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            src: url('fonts/raleway-v34-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* raleway-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/raleway-v34-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+
+        /* ubuntu-mono-regular - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Ubuntu Mono';
+            font-style: normal;
+            font-weight: 400;
+            src: url('fonts/ubuntu-mono-v17-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
+        /* ubuntu-mono-700 - latin */
+        @font-face {
+            font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+            font-family: 'Ubuntu Mono';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/ubuntu-mono-v17-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+        }
 
         /* normalize */
         button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0} menu,article,aside,details,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{}button,select{text-transform:none}[type=submit], [type=reset],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}/*# sourceMappingURL=normalize.min.css.map */
@@ -641,14 +673,11 @@
             <section class="top">
                 <h2>Design for accessibility</h2>
                 <article>
-                    <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
-                        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-                        xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/"
-                        viewBox="0 0 8.995833 11.244792375" version="1.1" x="0px" y="0px">
+                    <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.995833 11.244792375" version="1.1" x="0px" y="0px">
                         <g>
-                            <path style="color:#000000;paint-order:fill markers stroke;"
+                            <path style="paint-order:fill markers stroke;"
                                 d="M 1.0432707,0.80329224 A 0.24944641,0.24944641 0 0 0 0.79521867,1.0797672 l 0.61961203,5.680915 a 0.24944641,0.24944641 0 0 0 0.149866,0.202061 l 2.835031,1.209771 a 0.24944641,0.24944641 0 0 0 0.195859,0 l 2.83555,-1.209771 a 0.24944641,0.24944641 0 0 0 0.149863,-0.202061 l 0.619615,-5.680915 A 0.24944641,0.24944641 0 0 0 7.9525627,0.80329224 Z m 0.278025,0.49868996 h 6.353242 l -0.573622,5.259226 -2.602999,1.110033 -2.603518,-1.110033 z m 3.494953,1.156543 a 0.24941616,0.24941616 0 0 0 -0.228414,0.18294 l -0.712634,2.597829 a 0.24941616,0.24941616 0 0 0 0.175187,0.307482 0.24941616,0.24941616 0 0 0 0.307482,-0.174669 l 0.710567,-2.597832 a 0.24941616,0.24941616 0 0 0 -0.174671,-0.307482 0.24941616,0.24941616 0 0 0 -0.07752,-0.0083 z m -1.511568,0.394817 a 0.24941616,0.24941616 0 0 0 -0.162268,0.06615 l -0.98084,0.904358 a 0.24944111,0.24944111 0 0 0 0,0.366392 l 0.98084,0.903842 a 0.24941616,0.24941616 0 0 0 0.353991,-0.01498 0.24941616,0.24941616 0 0 0 -0.01497,-0.351409 l -0.782398,-0.721934 0.782398,-0.71987 a 0.24941616,0.24941616 0 0 0 0.01497,-0.351406 0.24941616,0.24941616 0 0 0 -0.191723,-0.08113 z m 2.38647,0 a 0.24941616,0.24941616 0 0 0 -0.191724,0.08113 0.24941616,0.24941616 0 0 0 0.01447,0.351406 l 0.782916,0.719871 -0.782916,0.721934 a 0.24941616,0.24941616 0 0 0 -0.01447,0.351409 0.24941616,0.24941616 0 0 0 0.353475,0.01497 l 0.981358,-0.903842 a 0.24944111,0.24944111 0 0 0 0,-0.366392 l -0.981358,-0.904349 a 0.24941616,0.24941616 0 0 0 -0.161751,-0.06615 z"
-                                fill="#000000" fill-rule="evenodd" stroke-width="0.264582" stroke-linecap="round"
+                                fill-rule="evenodd" stroke-width="0.264582" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </g>
                     </svg>
@@ -871,7 +900,7 @@
                     </div>
                 </article>
                 <article>
-                    <svg class="icons" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 110.0 135.0">
+                    <svg class="icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 110.0 135.0">
                         <path d="m16.625 6.25c-0.80859 0.015625-1.5742 0.50781-1.8906 1.3086-0.42578 1.0664 0.089844 2.2812 1.1602 2.707l10.418 4.168c1.0664 0.42578 2.2812-0.089844 2.707-1.1602 0.42578-1.0664-0.089843-2.2812-1.1602-2.707l-10.418-4.168c-0.26562-0.10547-0.54297-0.15625-0.81641-0.14844zm33.375 0c-0.32031 0-0.64062 0.074219-0.92969 0.21875l-12.5 6.25c-0.70703 0.35156-1.1523 1.0742-1.1523 1.8633v14.582h-2.082c-1.1484 0-2.082 0.93359-2.082 2.082v8.332c0 1.1484 0.93359 2.082 2.082 2.082h1.5273l-9.4219 39.582h-6.6914c-1.1484 0-2.082 0.93359-2.082 2.082v8.332c0 1.1484 0.93359 2.082 2.082 2.082h62.5c1.1484 0 2.082-0.93359 2.082-2.082v-8.332c0-1.1484-0.93359-2.082-2.082-2.082h-6.6914l-9.4219-39.582h1.5273c1.1484 0 2.082-0.93359 2.082-2.082v-8.332c0-1.1484-0.93359-2.082-2.082-2.082h-2.082v-14.582c0-0.78906-0.44531-1.5117-1.1523-1.8633l-12.5-6.25c-0.29297-0.14453-0.61328-0.21875-0.92969-0.21875zm33.375 0c-0.26953-0.007812-0.54688 0.042969-0.81641 0.14844l-10.418 4.168c-1.0703 0.42578-1.5859 1.6406-1.1602 2.707 0.42578 1.0703 1.6406 1.5859 2.707 1.1602l10.418-4.168c1.0703-0.42578 1.5859-1.6406 1.1602-2.707-0.32031-0.80078-1.082-1.293-1.8906-1.3086zm-33.375 4.4102 10.418 5.207v13.297h-20.832v-13.297l10.418-5.207zm0 3.9219c-3.4492 0-6.25 2.8008-6.25 6.25s2.8008 6.25 6.25 6.25 6.25-2.8008 6.25-6.25-2.8008-6.25-6.25-6.25zm-33.332 4.168c-1.1484 0-2.082 0.93359-2.082 2.082 0 1.1484 0.93359 2.082 2.082 2.082h10.418c1.1484 0 2.082-0.93359 2.082-2.082 0-1.1484-0.93359-2.082-2.082-2.082zm33.332 0c1.1484 0 2.082 0.93359 2.082 2.082 0 1.1484-0.93359 2.082-2.082 2.082s-2.082-0.93359-2.082-2.082c0-1.1484 0.93359-2.082 2.082-2.082zm22.918 0c-1.1484 0-2.082 0.93359-2.082 2.082 0 1.1484 0.93359 2.082 2.082 2.082h10.418c1.1484 0 2.082-0.93359 2.082-2.082 0-1.1484-0.93359-2.082-2.082-2.082zm-45.793 8.332c-0.26953-0.007812-0.54688 0.042969-0.81641 0.14844l-10.418 4.168c-1.0703 0.42578-1.5859 1.6406-1.1602 2.707 0.42578 1.0703 1.6406 1.5859 2.707 1.1602l10.418-4.168c1.0703-0.42578 1.5859-1.6406 1.1602-2.707-0.32031-0.80078-1.082-1.293-1.8906-1.3086zm45.75 0c-0.80859 0.015625-1.5742 0.50781-1.8906 1.3086-0.42578 1.0664 0.089844 2.2812 1.1602 2.707l10.418 4.168c1.0664 0.42578 2.2812-0.089844 2.707-1.1602 0.42578-1.0664-0.089843-2.2812-1.1602-2.707l-10.418-4.168c-0.26562-0.10547-0.54297-0.15625-0.81641-0.14844zm-37.457 6.25h29.168v4.168h-29.168zm3.7266 8.332h21.711l1.4883 6.25h-24.691l1.4883-6.25zm-2.4766 10.418h26.668l1.9883 8.332h-30.641l1.9883-8.332zm-2.9805 12.5h32.625l1.9805 8.332h-36.586zm-2.9766 12.5h38.574l0.99219 4.168h-40.559zm-9.8789 8.332h58.332v4.168h-58.332z" fill-rule="evenodd"/>
                        </svg>
                     <div class="content">
